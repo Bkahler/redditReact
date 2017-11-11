@@ -1,0 +1,69 @@
+html, body, .container-fluid {
+    height:100%;
+}
+
+img.gif {
+    width: 100%;
+    height: 100%;
+}
+.carousel-row{
+  height: 100%;
+}
+
+.post-meta-data{
+  font-size: 8px;
+}
+
+.thumb-box>img{
+  height: auto;
+}
+
+.article-box>img{
+  width: 85%;
+}
+
+.slick-initialized.slick-slider,
+.slick-list,
+.slick-track{
+  height: 100%;
+}
+
+.post{
+  height: 90%;
+  padding: 10px;
+}
+
+.list{
+  height: 90%;
+  padding: 10px;
+}
+
+.blue{
+  margin-bottom: 40px;
+  height: 40%;
+  padding:10px;
+}
+
+.container-fluid.main{
+  padding: 20px;
+  /*background-color: #212121;*/
+}
+
+.slick-dots li.slick-active button:before{
+  /*color: white !important;*/
+}
+
+.slick-slide.slick-active{
+  border: 2px solid black;
+  height: 200px;
+}
+
+.container.index-container-main{
+  max-width: 100%
+  height: 100%;
+  padding:0px;
+}
+
+html, body, .container-fluid {
+    height:100%;
+}
