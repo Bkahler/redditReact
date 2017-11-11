@@ -51,9 +51,9 @@ class App extends React.Component {
 
     return(
       <div className='row carousel-row'>
-        <h1> ReactReddit </h1>
+        <h3> ReactReddit </h3>
         <div className='blue carousel-row col-md-12'>
-          <h5>Main Feed (Top 25)</h5>
+          <h6>Main Feed (Top 25)</h6>
           <PostList subreddits={[]} posts={ this.state.mainFeedPosts }/>
         </div>
         <div className='blue  carousel-row col-md-12'>
