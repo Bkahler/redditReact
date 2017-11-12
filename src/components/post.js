@@ -5,7 +5,9 @@ class PostFormatter {
   static postItem(post){
     if(!post){
       return(
-        <div><h1>LOADING</h1></div>
+        <div className='post-wrapper' key={ post.data.id }>
+
+        </div>
       );
     };
 
@@ -22,10 +24,10 @@ class PostFormatter {
       <div className='post-wrapper' key={ post.data.id }>
         { preview }
         <div className={ colClass }>
-          <div className='title-div reds'>
+          <div className='title-div '>
             <a href={ postUrl } className='post-title' target="_blank"> { post.data.title } </a>
           </div>
-          <div className='post-meta-data reds'>
+          <div className='post-meta-data '>
             <p>
               <strong>Author:</strong> { post.data.author } |
               <strong> SubReddit:</strong> { post.data.subreddit_name_prefixed } <br/>
@@ -45,8 +47,16 @@ class PostFormatter {
   };
 
   static preview(post){
+
     var thumbnail = post.data.thumbnail;
-    var url = post.data.url;
+    var url = post.data.url
+    var urlExt = post.data.url.split('.').pop()
+
+    if(urlExt == 'jpg' || urlExt =='png'){
+      var img = url
+    } else{
+      var img = thumbnail
+    }
 
     if(this.hasImage(post)) {
       if(this.isGif(post)){
@@ -58,7 +68,7 @@ class PostFormatter {
       } else{
         return(
           <div className='thumb-box col-md-7 post'>
-            <img className='pic' src={ thumbnail }/>
+            <img className='pic' src={ img }/>
           </div>
         );
       }

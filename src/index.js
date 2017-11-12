@@ -65,6 +65,7 @@ class App extends React.Component {
             subreddits= { this.state.subreddits }
             posts= { this.state.subRedditPosts }
             onSubRedditClick = { term => subRedditSearch(term) }
+            subRedditList= { true }
           />
         </div>
       </div>
