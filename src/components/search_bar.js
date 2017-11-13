@@ -13,10 +13,11 @@ class SearchBar extends React.Component {
       <div className='search-bar col-md-8'>
        <form onSubmit={ this.handleSubmit }>
           <input
-            placeholder='Enter A Subreddit Name'
+            className='subRedditSearch'
+            placeholder='Enter Subreddit'
             value={ this.state.term }
             onChange={ event => this.onInputChange(event.target.value) } />
-          <input type="submit" value="add" />
+          <input className='add-btn' type="submit" value="add" />
         </form>
       </div>
     );
