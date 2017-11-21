@@ -1,89 +1,24 @@
-html, body, .container-fluid {
+html, body{
     height:100%;
     margin: 0;
     font-family: 'Source Code Pro', monospace;
 }
 
-
-
-/*font-family: 'Source Code Pro', monospace;*/
-/*rgb(19, 51, 102) Blue
-  rgb(237, 204, 42) yellow
-  rgb(198, 198, 196) grey
-  rgb(105, 168, 3)  green
-
-
-*/
 .reds{
   border: 1px solid red;
 }
 
-h3.brand{
-  color: white
+.greens{
+  border: 1px solid green;
 }
 
-h6.feed-label{
-  margin-left: 15px;
-  color: white;
-  padding: 5px;
-  background-color: rgba(255,255,255,0.2);
+.blues{
+  border: 1px solid blue;
 }
 
-.outside-wrapper{
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.sidebar{
-  height: 100%;
-  margin: 0;
-}
-
- div.col-md-1.sidebar.yellow{
-  background-color: rgb(237, 204, 42);
-  width: 5.6%;
-  padding: 0;
-}
-
-.green{
-  background-color: rgb(105, 168, 3);
-}
-
-.navy{
-  background-color: rgb(19, 51, 102);
-}
-
-.slick-next:before, .slick-prev:before{
-  color: white !important;
-}
 img.gif {
     width: 100%;
     height: 100%;
-}
-div.col-md-10.row.carousel-row.navy {
-  height: 100%;
-  width: 90%;
-  padding-right: 0px;
-  padding-left: 0px;
-}
-
-.subRedditBtn:hover{
-  padding: 2px 5px;
-  margin: 3px;
-  border: 1px solid rgb(19, 51, 102);
-  background-color: white;
-  font-size: 14px;
-  color: rgb(19, 51, 102);
-}
-
-.subRedditBtn{
-  padding: 2px 5px;
-  margin: 3px;
-  border: 1px solid rgb(19, 51, 102);
-  font-size: 14px;
-  color: white;
-  background-color: rgb(19, 51, 102)
 }
 
 .article-box>img{
@@ -96,107 +31,26 @@ div.col-md-10.row.carousel-row.navy {
   border: 1px solid black;
 }
 
-.thumb-box.post{
-  padding-right: 5px;
-}
-.slick-initialized.slick-slider,
-.slick-list,
-.slick-track{
-  height: 100%;
+
+
+
+
+
+/*POST FEED PANNEL */
+div >.row.feed-row{
+  margin-bottom: 50px;
 }
 
-.col-md-5.post-text-container{
-  /*position: relative;*/
-  height: 100%;
-  line-height: 1px;
-  padding: 10px 5px;
+.slick-slide.full-height {
+  height: 80vh;
 }
 
-.title-div{
-  padding: 5px;
-}
-.post-title{
-  font-size: 1vw;
-  line-height: 100%;
+/* GRID ClASSES */
+
+.col.full-width {
+  width: 100%
 }
 
-.loading{
-  color: rgba(0,0,0,0.1);
-  padding: 8%;
-  height: 100%;
-  background-color: white;
-  border-radius: 0px;
-}
-
-.post{
-  height: 90%;
-  padding: 10px;
-  text-align: center;
-}
-
-.post-meta-data{
-  font-size: 7px;
-  line-height: 10px;
-  /*position: absolute;*/
-  bottom: 0;
-  padding: 10px 5px;
-  margin: 10px 0px;
-}
-
-.post-meta-data > p{
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
-}
-
-.list{
-  height: 270px;
-  padding: 3px 10px;
-}
-
-.col-md-12.blue{
-  margin-bottom: 40px;
-  height: 40%;
-  padding: 10px 0px;
-
-}
-
-.container-fluid.main{
-  padding: 0px;
-  /*background-color: #212121;*/
-}
-
-.slick-dots li.slick-active button:before{
-  color: white !important;
-}
-
-.slick-slide.slick-active{
-  /*background-image: url('crump.jpg');*/
-  margin: 0px 1px;
-  background-color: white;
-  height: 250px;
-  border-radius: 5px;
-  border: 4px solid rgb(19, 51, 102);
-  padding: 15px 0px 0px 0px;
-}
-
-.container.index-container-main{
-  max-width: 100%
-  height: 100%;
-  padding:0px;
-}
-
-input.add-btn{
-  font-size: 14px;
-}
-
-input.subRedditSearch{
-  padding: 5px;
-  margin-right: 10px;
-  width: 150px;
-  border: none;
-  font-size: 12px;
-}
-
-html, body, .container-fluid {
-    height:100%;
+.col.quarter-width{
+  width: 25%
 }

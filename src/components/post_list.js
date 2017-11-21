@@ -7,8 +7,8 @@ const PostList = (props)=> {
   if (props.posts.length < 1 ){
     if (props.subRedditList == true){
       return(
-        <div className='col-md-12 list'>
-          <div className='loading'>
+        <div className='reds'>
+          <div className='greens'>
             <center>
               <h1>Search For A Subreddit</h1>
             </center>
@@ -17,18 +17,23 @@ const PostList = (props)=> {
       );
     } else{
       return(
-        <div className='col-md-12 list'>
-          <div className='loading col-md-4'>
+        <div className='row'>
+          <div className='col quarter-width greens'>
             <center>
               <img src='./src/components/loading.gif'/>
             </center>
           </div>
-          <div className='loading col-md-4'>
+          <div className='col quarter-width greens'>
             <center>
               <img src='./src/components/loading.gif'/>
             </center>
           </div>
-          <div className='loading col-md-4'>
+          <div className='col quarter-width greens'>
+            <center>
+              <img src='./src/components/loading.gif'/>
+            </center>
+            </div>
+          <div className='col quarter-width greens'>
             <center>
               <img src='./src/components/loading.gif'/>
             </center>
@@ -62,12 +67,12 @@ const PostList = (props)=> {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1
   };
 
   return(
-    <div className='col-md-12 list'>
+    <div className='row feed-row reds'>
       { subreds }
       <Slider {...settings}>
         { postItems }

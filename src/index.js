@@ -50,31 +50,27 @@ class App extends React.Component {
     const subRedditSearch = _.debounce((term) => { this.subRedditSearch(term) }, 150);
 
     return(
-      <div className='outside-wrapper'>
-        <div className='col-md-1  sidebar yellow'></div>
-        <div className=' col-md-10 row carousel-row navy'>
-          <h3 className='brand'> ReactReddit </h3>
-          <div className='blue carousel-row col-md-12'>
-            <h6 className='feed-label'>Main Feed (Top 25)</h6>
-            <PostList subreddits={[]} posts={ this.state.mainFeedPosts }/>
-          </div>
-          <div className='blue  carousel-row col-md-12'>
-            <SearchBar
-              onSearchTermChange={ term => subRedditSearch(term) }
-              onSubRedditSubmit={ term => this.subRedditAdd(term) }
-            />
-            <PostList
-              subreddits= { this.state.subreddits }
-              posts= { this.state.subRedditPosts }
-              onSubRedditClick = { term => subRedditSearch(term) }
-              subRedditList= { true }
-            />
-          </div>
+      <div className='row'>
+        <h3 className='brand'> ReactReddit </h3>
+        <div className='col full-width blues'>
+          <h6 className=''>Main Feed (Top 25)</h6>
+          <PostList subreddits={[]} posts={ this.state.mainFeedPosts }/>
         </div>
-        <div className='col-md-push-1  sidebar green '></div>
+        <div className='col full-width blues'>
+          <SearchBar
+            onSearchTermChange={ term => subRedditSearch(term) }
+            onSubRedditSubmit={ term => this.subRedditAdd(term) }
+          />
+          <PostList
+            subreddits= { this.state.subreddits }
+            posts= { this.state.subRedditPosts }
+            onSubRedditClick = { term => subRedditSearch(term) }
+            subRedditList= { true }
+          />
+        </div>
       </div>
     );
   };
 }
 
-ReactDom.render(<App />, document.querySelector('.container-fluid'));
+ReactDom.render(<App />, document.querySelector('.main-frame'));
