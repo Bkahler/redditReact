@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
 import PostFormatter from './post'
+import LoadingPannel from './loading_pannel'
 
 const PostList = (props)=> {
 
   if (props.posts.length < 1 ){
     if (props.subRedditList == true){
       return(
-        <div className='reds'>
+        <div className=''>
           <div className='greens'>
             <center>
               <h1>Search For A Subreddit</h1>
@@ -17,28 +18,7 @@ const PostList = (props)=> {
       );
     } else{
       return(
-        <div className='row'>
-          <div className='col quarter-width greens'>
-            <center>
-              <img src='./src/components/loading.gif'/>
-            </center>
-          </div>
-          <div className='col quarter-width greens'>
-            <center>
-              <img src='./src/components/loading.gif'/>
-            </center>
-          </div>
-          <div className='col quarter-width greens'>
-            <center>
-              <img src='./src/components/loading.gif'/>
-            </center>
-            </div>
-          <div className='col quarter-width greens'>
-            <center>
-              <img src='./src/components/loading.gif'/>
-            </center>
-          </div>
-        </div>
+        <LoadingPannel />
       );
     }
 
@@ -72,7 +52,7 @@ const PostList = (props)=> {
   };
 
   return(
-    <div className='row feed-row reds'>
+    <div className='row feed-row'>
       { subreds }
       <Slider {...settings}>
         { postItems }

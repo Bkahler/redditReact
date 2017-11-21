@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+// <iframe src='https://www.gfycat.com/ifr/RichPepperyFerret' frameborder='0' scrolling='no' width='640' height='346' allowfullscreen></iframe>
 class PostFormatter {
 
   static postItem(post){
@@ -16,9 +17,9 @@ class PostFormatter {
 
 
     return(
-      <div className='col quarter-width full-height greens' key={ post.data.id }>
+      <div className='col quarter-width full-height black' key={ post.data.id }>
         { preview }
-        <div className='reds'>
+        <div className=''>
           <div className='blues'>
             <a href={ postUrl } className='' target="_blank"> { post.data.title } </a>
           </div>
@@ -87,6 +88,13 @@ class PostFormatter {
   static isGif(post){
     var url = post.data.url
     var extention = url.split(".").pop();
+console.log("-----------------TITLE------------------")
+console.log(post.data.title);
+console.log("-----------------EXT------------------")
+console.log(extention);
+console.log("-----------------Data------------------")
+console.log(post.data);
+console.log("-----------------------------------")
 
     if (extention == 'gifv') return true;
     if (extention == 'gif') return true;

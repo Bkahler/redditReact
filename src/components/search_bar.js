@@ -10,7 +10,7 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div className='reds'>
+      <div className=''>
        <form onSubmit={ this.handleSubmit }>
           <input
             className='blues'

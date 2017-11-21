@@ -52,11 +52,11 @@ class App extends React.Component {
     return(
       <div className='row'>
         <h3 className='brand'> ReactReddit </h3>
-        <div className='col full-width blues'>
+        <div className='col full-width'>
           <h6 className=''>Main Feed (Top 25)</h6>
           <PostList subreddits={[]} posts={ this.state.mainFeedPosts }/>
         </div>
-        <div className='col full-width blues'>
+        <div className='col full-width'>
           <SearchBar
             onSearchTermChange={ term => subRedditSearch(term) }
             onSubRedditSubmit={ term => this.subRedditAdd(term) }
