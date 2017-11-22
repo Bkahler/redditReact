@@ -1,49 +1,42 @@
 import React, { Component } from 'react';
-import Slider from 'react-slick';
-import PostFormatter from './post'
-import LoadingPannel from './loading_pannel'
+import Slider          from 'react-slick';
+import Post            from './post';
+import LoadingPannel   from './loading_pannel';
+import SubredditPannel from './subreddit_pannel';
 
 const PostList = (props)=> {
 
   if (props.posts.length < 1 ){
     if (props.subRedditList == true){
       return(
-        <div className=''>
-          <div className='greens'>
-            <center>
-              <h1>Search For A Subreddit</h1>
-            </center>
-          </div>
-        </div>
+        <SubredditPannel />
       );
     } else{
       return(
         <LoadingPannel />
       );
     }
-
   };
 
   const postItems = props.posts.map((post) =>{
     return(
-      PostFormatter.postItem(post)
+      Post.postItem(post)
     );
   });
 
-  const subreds = props.subreddits.map((subR) =>{
-    let subRr = `r/${subR}`
+  const subRedditTabs = props.subreddits.map((subR) =>{
     return(
       <button
-        onClick={ () => props.onSubRedditClick(subR) }
+        onClick={ () => props.onSubRedditClick(`r/${subR}`) }
         type="button"
         className="subRedditBtn"
-        key={ subR }>
-        { subRr }
+        key={ `r/${subR}` }>
+        { `r/${subR}` }
       </button>
     );
   });
 
-  const settings = {
+  const caroselSettings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -53,12 +46,13 @@ const PostList = (props)=> {
 
   return(
     <div className='row feed-row'>
-      { subreds }
-      <Slider {...settings}>
+      { subRedditTabs }
+      <Slider {...caroselSettings}>
         { postItems }
       </Slider>
     </div>
   );
+
 }
 
 export default PostList;

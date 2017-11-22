@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import _  from 'lodash';
-import ReactDom from 'react-dom';
-import snoowrap from 'snoowrap';
-import PostList from './components/post_list';
+import _         from 'lodash';
+import ReactDom  from 'react-dom';
+import snoowrap  from 'snoowrap';
+import PostList  from './components/post_list';
 import SearchBar from './components/search_bar';
-import axios    from 'axios';
+import axios     from 'axios';
 
 class App extends React.Component {
 

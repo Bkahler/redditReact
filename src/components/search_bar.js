@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 class SearchBar extends React.Component {
 
@@ -6,6 +6,17 @@ class SearchBar extends React.Component {
     super(props);
     this.state = { term: '' };
     this.handleSubmit = this.handleSubmit.bind(this);
+  };
+
+  onInputChange(term) {
+    this.setState({ term: term });
+    this.props.onSearchTermChange(term);
+  };
+
+  handleSubmit(e) {
+    e.preventDefault();
+    let term = this.state.term
+    this.props.onSubRedditSubmit(term);
   };
 
   render() {
@@ -21,17 +32,6 @@ class SearchBar extends React.Component {
         </form>
       </div>
     );
-  };
-
-  onInputChange(term) {
-    this.setState({ term: term });
-    this.props.onSearchTermChange(term);
-  };
-
-  handleSubmit(e) {
-    e.preventDefault();
-    let term = this.state.term
-    this.props.onSubRedditSubmit(term);
   };
 };
 
